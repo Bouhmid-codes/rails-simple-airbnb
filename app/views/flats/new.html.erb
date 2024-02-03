@@ -1,0 +1,11 @@
+<div class="container my-4 border border-ligh">
+  <h1>Add a new Flat</h1>
+  <%= simple_form_for @flat do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <%= f.input :price_per_night %>
+    <%= f.input :number_of_guests %>
+    <%= f.button :submit, class: 'btn btn-outline-dark' %>
+  <% end %>
+</div>
