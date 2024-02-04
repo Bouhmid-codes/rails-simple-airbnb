@@ -6,12 +6,12 @@
       id:"logo", alt: 'logo', width:'120', height:'40', class:'d-inline-block align-text-top' %>
     <% end %>
 
-    <div class="d-flex">
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-      <%= link_to 'Add flat', new_flat_path, class: "btn btn-outline-dark"  %>
-    </div>
+    <%= simple_form_for :search, url: flats_path, method: "get" do |f| %>
+      <%= f.input :search,
+      placeholder: 'Search', class:'form-control me-2 p-2' %>
+      <%= f.button :submit, class: 'btn btn-outline-success' %>
+      <%= link_to 'Add flat', new_flat_path, class: "btn btn-outline-dark " %>
+    <% end %>
+
   </div>
 </nav>

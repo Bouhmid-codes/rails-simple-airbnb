@@ -1,0 +1,62 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @flat.img_url %>);">
+</div>
+
+<div class="container-1">
+
+  <div class="container my-3 ">
+    <div class="row">
+      <div class="card-left col-8" >
+        <div class="card mb-3" >
+          <div class="card-body">
+            <h5 class="card-title fs-1"><%= @flat.name %></h5>
+            <h6 class="card-subtitle mb-2 text-muted fs-4 mt-1"><%= @flat.address %></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">A bit more about this flat...</h2>
+            <p class="card-text fs-5"><%= @flat.description %>.</p>
+          </div>
+          <img src="https://i.stack.imgur.com/HILmr.png" class="bd-placeholder-img card-img-bottom px-3 pb-3" >
+        </div>
+
+      </div>
+
+      <div class="card-right col-4" >
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Choose dates!</h5>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">From</span>
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="12/10/2023">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">To</span>
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="12/10/2023">
+            </div>
+            <button class="btn btn-success w-100">Book</button>
+          </div>
+        </div>
+
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-details">Details</h5>
+            <h6 class="card-subtitle mb-2"><i class="fa-solid fa-user-group"></i> <%= @flat.number_of_guests %>  <i class="fa-solid fa-euro-sign"></i><%= @flat.price_per_night %></h6>
+          </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+              <h2>Share</h2>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
